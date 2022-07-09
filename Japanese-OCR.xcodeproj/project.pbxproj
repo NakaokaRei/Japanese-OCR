@@ -11,6 +11,8 @@
 		5C1A68732853915F00BB66C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A68722853915F00BB66C5 /* ContentView.swift */; };
 		5C1A68752853916000BB66C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1A68742853916000BB66C5 /* Assets.xcassets */; };
 		5C1A68782853916000BB66C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1A68772853916000BB66C5 /* Preview Assets.xcassets */; };
+		5C1A687F2853919300BB66C5 /* OcrManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A687E2853919300BB66C5 /* OcrManager.swift */; };
+		5C1A68812853992A00BB66C5 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A68802853992A00BB66C5 /* VideoCapture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		5C1A68722853915F00BB66C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5C1A68742853916000BB66C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C1A68772853916000BB66C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5C1A687E2853919300BB66C5 /* OcrManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcrManager.swift; sourceTree = "<group>"; };
+		5C1A68802853992A00BB66C5 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		5C64ED8A2853B0E400DE2E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +56,13 @@
 		5C1A686F2853915F00BB66C5 /* Japanese-OCR */ = {
 			isa = PBXGroup;
 			children = (
+				5C64ED8A2853B0E400DE2E55 /* Info.plist */,
 				5C1A68702853915F00BB66C5 /* Japanese_OCRApp.swift */,
 				5C1A68722853915F00BB66C5 /* ContentView.swift */,
 				5C1A68742853916000BB66C5 /* Assets.xcassets */,
 				5C1A68762853916000BB66C5 /* Preview Content */,
+				5C1A687E2853919300BB66C5 /* OcrManager.swift */,
+				5C1A68802853992A00BB66C5 /* VideoCapture.swift */,
 			);
 			path = "Japanese-OCR";
 			sourceTree = "<group>";
@@ -137,7 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C1A68812853992A00BB66C5 /* VideoCapture.swift in Sources */,
 				5C1A68732853915F00BB66C5 /* ContentView.swift in Sources */,
+				5C1A687F2853919300BB66C5 /* OcrManager.swift in Sources */,
 				5C1A68712853915F00BB66C5 /* Japanese_OCRApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,17 +280,19 @@
 				DEVELOPMENT_TEAM = 7ZJJ7KR6WA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Japanese-OCR/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "カメラを起動します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.me.n.rei.Japanese-OCR";
+				PRODUCT_BUNDLE_IDENTIFIER = "copppm.me.n.rei.Japanese-OCR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -299,17 +311,19 @@
 				DEVELOPMENT_TEAM = 7ZJJ7KR6WA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Japanese-OCR/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "カメラを起動します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.me.n.rei.Japanese-OCR";
+				PRODUCT_BUNDLE_IDENTIFIER = "copppm.me.n.rei.Japanese-OCR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
